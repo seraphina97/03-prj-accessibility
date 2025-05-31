@@ -1,0 +1,126 @@
+header {
+  background-color: #0071C5;
+  color: #fff;
+  text-align: center;
+  padding: 32px 10px 24px 10px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto 16px auto;
+  max-width: 180px;
+}
+
+header h1, header p {
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  scrollbar-width: thin;
+}
+
+body {
+  text-align: center;
+}
+
+.timeline-card {
+  background-color: #ffffff;
+  border: 2px solid #0071C5;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0, 113, 197, 0.08);
+  text-align: center;
+  flex: 0 0 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card img {
+  width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-card h2, .timeline-card h3 {
+  color: #0071C5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.timeline-card p {
+  display: block;
+  color: #fff;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+  word-break: break-word;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 4px;
+}
+
+.timeline-card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 112, 197, 0.836);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.timeline-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 500px) {
+  .timeline-card {
+    max-width: 95%;
+    padding: 10px;
+  }
+  .timeline-card img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;
+    gap: 0;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  .timeline-card {
+    flex: 1 1 auto;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
